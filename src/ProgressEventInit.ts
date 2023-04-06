@@ -16,4 +16,20 @@ interface ProgressEventInit extends EventInit {
   total: number;
 }
 
+const ProgressEventInit = {
+  /**
+   * @see https://webidl.spec.whatwg.org/#es-dictionary
+   */
+  from(o: unknown): ProgressEventInit {
+    if (!(typeof o === "undefined" || typeof o === "object")) {
+      throw new TypeError();
+    }
+    o ??= {}
+    o.lengthComputable ??= false;
+    o.loaded ??= 0
+    o.total ??= 0
+    return o;
+  }
+}
+
 export default ProgressEventInit;
