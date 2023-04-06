@@ -1,6 +1,6 @@
 {
-  "name": "xmlhttprequest-ssl",
-  "description": "XMLHttpRequest for Node",
+  "name": "@jcbhmr/xhr",
+  "description": "🌐 `XMLHttpRequest` polyfill that supports sync requests",
   "version": "2.1.0",
   "author": {
     "name": "Michael de Wit"
