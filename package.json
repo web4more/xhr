@@ -1,35 +1,28 @@
 {
   "name": "@jcbhmr/xhr",
-  "description": "🌐 `XMLHttpRequest` polyfill that supports sync requests",
-  "version": "2.1.0",
-  "author": {
-    "name": "Michael de Wit"
-  },
-  "keywords": [
-    "xhr",
-    "ajax"
+  "description": "🌐 XMLHttpRequest polyfill that supports sync requests",
+  "version": "3.0.0",
+  "contributors": [
+    "Michael de Wit",
+    "Jacob Hummer <jcbhmr@outlook.com> (https://jcbhmr.me/)"
   ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://creativecommons.org/licenses/MIT/"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mjwwit/node-XMLHttpRequest.git"
-  },
-  "bugs": "http://github.com/mjwwit/node-XMLHttpRequest/issues",
-  "engines": {
-    "node": ">=0.4.0"
-  },
+  "keywords": ["xhr", "ajax", "fetch", "polyfill", "synchronous"],
+  "license": "MIT",
+  "repository": "github.com:jcbhmr/xhr",
+  "bugs": "http://github.com/jcbhmr/xhr/issues",
   "scripts": {
-    "test": "cd ./tests && node test-constants.js && node test-events.js && node test-exceptions.js && node test-headers.js && node test-redirect-302.js && node test-redirect-303.js && node test-redirect-307.js && node test-request-methods.js && node test-request-protocols-txt-data.js && node test-request-protocols-binary-data.js && node test-sync-response.js"
+    "start": "vitest",
+    "prepack": "vite build",
+    "test": "vitest run"
   },
-  "directories": {
-    "lib": "./lib",
-    "example": "./example"
-  },
-  "main": "./lib/XMLHttpRequest.js",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "latest",
+    "vite": "latest",
+    "vite-plugin-dts": "latest",
+    "vitest": "latest",
+    "prettier": "latest",
+    "prettier-plugin-jsdoc": "latest",
+    "prettier-plugin-packagejson": "latest"
+  }
 }
