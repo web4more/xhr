@@ -97,7 +97,7 @@ test(".responseType = 'json'", async () => {
 });
 
 test(".responseType = 'document' throws when no DOMParser()", async () => {
-  delete DOMParser;
+  delete globalThis.DOMParser;
 
   const xhr = new XMLHttpRequest();
   const errorPromise = pEvent(xhr, "error");
@@ -108,7 +108,7 @@ test(".responseType = 'document' throws when no DOMParser()", async () => {
   assert(true);
 });
 
-test(".responseType = 'document' works when DOMParser() exists", () => {
+test(".responseType = 'document' works when DOMParser() exists", async () => {
   globalThis.DOMParser = DOMParser_ORIGINAL;
 
   const xhr = new XMLHttpRequest();

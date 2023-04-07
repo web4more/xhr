@@ -6,7 +6,13 @@
     "Michael de Wit",
     "Jacob Hummer <jcbhmr@outlook.com> (https://jcbhmr.me/)"
   ],
-  "keywords": ["xhr", "ajax", "fetch", "polyfill", "synchronous"],
+  "keywords": [
+    "xhr",
+    "ajax",
+    "fetch",
+    "polyfill",
+    "synchronous"
+  ],
   "license": "MIT",
   "repository": "github.com:jcbhmr/xhr",
   "bugs": "http://github.com/jcbhmr/xhr/issues",
@@ -15,14 +21,18 @@
     "prepack": "vite build",
     "test": "vitest run"
   },
-  "dependencies": {},
   "devDependencies": {
+    "jsdom": "^21.1.1",
+    "p-event": "^5.0.1",
+    "prettier": "latest",
+    "prettier-plugin-jsdoc": "latest",
+    "prettier-plugin-packagejson": "latest",
     "typescript": "latest",
     "vite": "latest",
     "vite-plugin-dts": "latest",
-    "vitest": "latest",
-    "prettier": "latest",
-    "prettier-plugin-jsdoc": "latest",
-    "prettier-plugin-packagejson": "latest"
+    "vitest": "latest"
+  },
+  "dependencies": {
+    "undici": "^5.21.0"
   }
 }
