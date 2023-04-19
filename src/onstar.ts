@@ -12,7 +12,7 @@
 function onstar<T extends typeof EventTarget>(class_: T, name: string): void {
   name = "" + name;
 
-  const handler = new WeakMap<any, ((event: Event) => any) | null>();
+  const handler = new WeakMap<T["prototype"], ((event: Event) => any) | null>();
 
   Object.defineProperty(class_.prototype, "on" + name, {
     get(this: T["prototype"]): ((event: Event) => any) | null {
