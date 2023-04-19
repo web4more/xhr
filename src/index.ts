@@ -5,6 +5,15 @@ import XMLHttpRequest from "./XMLHttpRequest.ts";
 import ProgressEvent from "./ProgressEvent.ts";
 import ProgressEventInit from "./ProgressEventInit.ts";
 
+if (typeof fetch === "undefined") {
+  throw new ReferenceError(
+    "fetch is not defined.\n" +
+      "You need a fetch() polyfill! For more information, check out the " +
+      "installation guide from the readme. " +
+      "https://github.com/jcbhmr/xhr#installation"
+  );
+}
+
 type XMLHttpRequestEventTarget_ = typeof XMLHttpRequestEventTarget;
 type XMLHttpRequestUpload_ = typeof XMLHttpRequestUpload;
 type XMLHttpRequestResponseType_ = XMLHttpRequestResponseType;
